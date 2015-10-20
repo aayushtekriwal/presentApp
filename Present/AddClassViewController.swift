@@ -26,9 +26,15 @@ class AddClassViewController: UIViewController {
         self.majorInput.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.majorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
         self.minorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a minor value
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
 
+        
     }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
