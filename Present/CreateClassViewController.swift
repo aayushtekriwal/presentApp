@@ -12,10 +12,10 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var classDpt: UITextField!
     @IBOutlet var classDesc: UITextField!
     @IBOutlet var classLateAfter: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.className.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.classLateAfter.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
@@ -23,9 +23,9 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
         self.classDpt.delegate = self;
         self.classDesc.delegate = self;
         self.classLateAfter.delegate = self;
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,13 +35,13 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
         createCourse()
     }
     
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-* 
+    //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
-//***Replace the complete original create course function as new validations have been added to allow user to only enter name, and possibly leave the other fields black. Course name is the only required field.
+    
+    //***Replace the complete original create course function as new validations have been added to allow user to only enter name, and possibly leave the other fields black. Course name is the only required field.
     func createCourse() {
         let course = PFObject(className: "Event")
         
@@ -95,8 +95,7 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     func randomMajMin() -> Int {
         let lower : UInt32 = 1

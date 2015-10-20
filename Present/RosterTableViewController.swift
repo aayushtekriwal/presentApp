@@ -21,8 +21,8 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
     @IBAction func beaconDetails(sender: AnyObject) {
         let major = String(course["major"])
         let minor = String(course["minor"])
-
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         let alert = UIAlertController(title: "Beacon Details", message: "Communicate the beacon details below for Students to add themselves to the class's roster" + "\n" + "\n" + "Major: " + major + "\n" + "Minor: " + minor, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             switch action.style{
@@ -38,8 +38,8 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         }))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    
     func handleRefresh(refreshControl: UIRefreshControl) {
         // Do some reloading of data and update the table view's data source
         // Fetch more objects from a web service, for example...
@@ -112,7 +112,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
                     allStudents.append(userObject)
                 }
             } catch _ {
-//                let userObject = "error"
+                //                let userObject = "error"
             }
             
         }
@@ -129,7 +129,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         let studentFName = student["firstName"] as! String
         let studentLName = student["lastName"] as! String
         let studentPName = studentLName + ", " + " " + studentFName
-
+        
         cell.studentName.text = studentPName
         
         //code below to change background color
@@ -153,16 +153,16 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         }
         
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-* 
-//***** Red looks bad and also sends a wrong signal. For those who are absent, professor should be able to call them out and manually create a log entry marking them absent for the class (Future feature). Only after this action should a cell turn red. Agree or not, but red still sends a wrong signal.
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //***** Red looks bad and also sends a wrong signal. For those who are absent, professor should be able to call them out and manually create a log entry marking them absent for the class (Future feature). Only after this action should a cell turn red. Agree or not, but red still sends a wrong signal.
         if logs.count == 0{
             cell.backgroundColor = UIColor.clearColor()
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+            //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
         }else{
             cell.backgroundColor = UIColor.greenColor()
         }
         
-
+        
         return cell
     }
     

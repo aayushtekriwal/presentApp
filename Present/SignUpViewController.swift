@@ -24,15 +24,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.firstNameField.becomeFirstResponder()
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        
         rolePicker.delegate = self
         rolePicker.dataSource = self
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.phoneField.delegate = self;
         self.emailField.delegate = self;
         self.passwordField.delegate = self;
@@ -54,12 +54,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         pickerLabel.textAlignment = .Center
         return pickerLabel
     }
-
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

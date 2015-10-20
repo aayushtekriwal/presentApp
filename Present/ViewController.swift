@@ -21,23 +21,23 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background.jpg")!)
-//        self.UsernameTextField.becomeFirstResponder()
+        //        self.UsernameTextField.becomeFirstResponder()
         self.UsernameTextField.autocorrectionType = .No
         self.PasswordTextField.autocorrectionType = .No
         self.UsernameTextField.delegate = self;
         self.PasswordTextField.delegate = self;
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
-
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        
+        
     }
     
     @IBAction func loginAction(sender: AnyObject) {
         login()
     }
     
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -52,7 +52,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     func login() {
         let user = PFUser()
@@ -83,14 +83,14 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
             }else {
                 NSLog("Wrong password")
                 
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+                //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
                 self.UsernameTextField.text = ""
                 self.PasswordTextField.text = ""
                 let alert = UIAlertController(title: "Login Failed", message: "Invalid login details", preferredStyle: UIAlertControllerStyle.Alert)
                 self.UsernameTextField.becomeFirstResponder()
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+                //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
             }
         })
     }
@@ -208,7 +208,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
     //        }
     //        self.presentViewController(alertController, animated: true, completion: nil)
     //    }
-
+    
     
     
 }

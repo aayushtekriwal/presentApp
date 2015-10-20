@@ -14,10 +14,10 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
     var currentUser = PFUser.currentUser()!
     var locationManager: CLLocationManager!
     var checkedIn = false
-
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+    
+    //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
     @IBOutlet weak var courseNameLabel: UILabel!  // *******Delete this line of code******
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     @IBAction func checkIn(sender: AnyObject) {
         getCheckedIn()
@@ -29,11 +29,11 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
-//        courseNameLabel.text = course["name"] as? String // *******Delete this line of code******
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //        courseNameLabel.text = course["name"] as? String // *******Delete this line of code******
         self.title = course["name"] as? String
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -56,12 +56,12 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
         
         let log = PFObject(className: "Log")
         log.setObject(userEvent, forKey: "userEventObjectId")
-
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         log.setObject("Present", forKey: "type") // log can save variable type. We need to specify what type of log. Students can check-in to mark themselves present
         // "In future" we can propose the addition of a feature where the Professor can create a log to mark the student absent on purpose, and then alter conditions to display the student's status in the roster in red. This is the reason why I suggested changing unknown presence status from red to clear color in the first place.
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        
         log.saveInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
@@ -165,13 +165,13 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+    
     
     
     
@@ -182,12 +182,12 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

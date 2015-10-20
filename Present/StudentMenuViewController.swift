@@ -9,7 +9,7 @@ import Parse
 
 class StudentMenuViewController: UITableViewController {
     
-
+    
     @IBOutlet weak var name: UILabel!
     var TableArray = [String]()
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,7 +22,7 @@ class StudentMenuViewController: UITableViewController {
         TableArray = ["Settings","Logout"]
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         
-      }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

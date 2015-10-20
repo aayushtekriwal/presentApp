@@ -10,7 +10,7 @@ import Parse
 class AddClassViewController: UIViewController {
     
     let currentUser = PFUser.currentUser()!
-
+    
     @IBOutlet weak var majorInput: UITextField!
     @IBOutlet weak var minorInput: UITextField!
     
@@ -22,21 +22,21 @@ class AddClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.majorInput.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.majorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
         self.minorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a minor value
-
+        
         
     }
-
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -60,9 +60,9 @@ class AddClassViewController: UIViewController {
             } catch _ {
                 courseObjects = []
             }
-
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-* NOTE: 
-//*******The code below does not work. The intention was to add validation so that the app refresed the add class form rather than crashing when the entered values are wrong.
+            
+            //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-* NOTE:
+            //*******The code below does not work. The intention was to add validation so that the app refresed the add class form rather than crashing when the entered values are wrong.
             if courseObjects.count == 0 {
                 self.majorInput.text = ""
                 self.minorInput.text = ""
@@ -71,8 +71,8 @@ class AddClassViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+            //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+            
             
             let courseObject = courseObjects[0]
             let userEvent = PFObject(className: "User_Event")
@@ -93,9 +93,9 @@ class AddClassViewController: UIViewController {
             }
         }
     }
-
     
-
+    
+    
     
     
     
@@ -107,12 +107,12 @@ class AddClassViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

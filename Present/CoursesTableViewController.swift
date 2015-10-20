@@ -12,14 +12,14 @@ class CoursesTableViewController: UITableViewController {
     var currentUser = PFUser.currentUser()!
     var courses:[AnyObject] = []
     
-//  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+    //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
     @IBAction func logout(sender: AnyObject) {
         PFUser.logOut()
         let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginNav")
         self.presentViewController(loginPage!, animated: true, completion: nil)
     }
-//  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
-
+    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+    
     override func viewWillAppear(animated: Bool) {
         courses = getCourses()
         self.tableView.reloadData()
@@ -36,8 +36,8 @@ class CoursesTableViewController: UITableViewController {
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,7 +77,7 @@ class CoursesTableViewController: UITableViewController {
                 let courseObject = try course.getFirstObject()
                 allCourses.append(courseObject)
             } catch _ {
-//                let courseObject = "error"
+                //                let courseObject = "error"
             }
             
         }

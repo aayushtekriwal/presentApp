@@ -9,7 +9,7 @@ class SettingsController: UIViewController {
     @IBAction func back(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {})
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,5 +17,5 @@ class SettingsController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
