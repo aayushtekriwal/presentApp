@@ -355,6 +355,7 @@
 				TargetAttributes = {
 					9DEE0B9A1BC0B05C003D778E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 72H2RUZ5EF;
 					};
 					9DEE0BAF1BC0B05C003D778E = {
 						CreatedOnToolsVersion = 6.4;
@@ -568,7 +569,7 @@
 				);
 				INFOPLIST_FILE = Present/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cmuis.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = PresentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Present-Bridging-Header.h";
@@ -596,7 +597,7 @@
 				);
 				INFOPLIST_FILE = Present/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cmuis.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = PresentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Present-Bridging-Header.h";
