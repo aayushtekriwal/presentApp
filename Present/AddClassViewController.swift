@@ -23,6 +23,7 @@ class AddClassViewController: UIViewController {
         super.viewDidLoad()
         
 //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.majorInput.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.majorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
         self.minorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a minor value
@@ -82,6 +83,9 @@ class AddClassViewController: UIViewController {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error {
                     _ = error.userInfo["error"] as? NSString
+                    let alert = UIAlertController(title: "Invalid Beacon Details", message: "Please check again and enter valid Beacon major and minor values", preferredStyle: UIAlertControllerStyle.Alert)
+                    self.majorInput.becomeFirstResponder()
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     // Show the errorString somewhere and let the user try again.
                 } else {
                     self.navigationController?.popViewControllerAnimated(true)

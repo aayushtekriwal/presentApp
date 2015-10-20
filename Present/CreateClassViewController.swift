@@ -15,16 +15,14 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.className.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.classLateAfter.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
         self.className.delegate = self;
         self.classDpt.delegate = self;
         self.classDesc.delegate = self;
         self.classLateAfter.delegate = self;
-
-
 //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     }
 

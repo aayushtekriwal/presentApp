@@ -467,6 +467,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required: Ex: 67475 A :: Innov. Information Systems" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkd-Ie-ggS">
                                 <rect key="frame" x="20" y="112" width="560" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.46999999999999997" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
@@ -480,8 +481,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional: Enter the Department Name (ex: IS, CS, ECE, Tepper UG)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-p9-XNI">
                                 <rect key="frame" x="20" y="184" width="560" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.46999999999999997" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="yes"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-Hh-sWe">
                                 <rect key="frame" x="20" y="232" width="560" height="31"/>
@@ -493,12 +495,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional: Describe the course" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPp-TJ-xuH">
                                 <rect key="frame" x="20" y="268" width="560" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.46999999999999997" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter time in minutes after class starts. Ex: 5 (for 5 minutes)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOv-np-ZTF">
                                 <rect key="frame" x="20" y="340" width="560" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.46999999999999997" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

@@ -23,7 +23,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         let minor = String(course["minor"])
 
 //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
-        let alert = UIAlertController(title: "Beacon Details", message: "(Communicate the beacon details below to students who need to be added to this class's roster)" + "\n" + "\n" + "Major: " + major + "\n" + "Minor: " + minor, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Beacon Details", message: "Communicate the beacon details below for Students to add themselves to the class's roster" + "\n" + "\n" + "Major: " + major + "\n" + "Minor: " + minor, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             switch action.style{
             case .Default:
@@ -128,7 +128,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         let student = students[indexPath.row]
         let studentFName = student["firstName"] as! String
         let studentLName = student["lastName"] as! String
-        let studentPName = studentLName + ", " + studentFName
+        let studentPName = studentLName + ", " + " " + studentFName
 
         cell.studentName.text = studentPName
         
@@ -156,7 +156,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
 //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-* 
 //***** Red looks bad and also sends a wrong signal. For those who are absent, professor should be able to call them out and manually create a log entry marking them absent for the class (Future feature). Only after this action should a cell turn red. Agree or not, but red still sends a wrong signal.
         if logs.count == 0{
-            cell.backgroundColor = UIColor.yellowColor()
+            cell.backgroundColor = UIColor.clearColor()
 //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
         }else{
             cell.backgroundColor = UIColor.greenColor()
