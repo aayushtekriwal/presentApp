@@ -47,7 +47,6 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
         var userEvents : [AnyObject] = []
         do {
             userEvents = try allUserEvents.findObjects() as [PFObject]
-            
         } catch _ {
             userEvents = []
         }
@@ -168,7 +167,6 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

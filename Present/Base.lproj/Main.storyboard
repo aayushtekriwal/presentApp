@@ -297,7 +297,7 @@
             </objects>
             <point key="canvasLocation" x="-1201" y="130"/>
         </scene>
-        <!--Courses-->
+        <!--My Courses-->
         <scene sceneID="tyl-Yg-PzC">
             <objects>
                 <tableViewController id="KGA-Id-tNc" customClass="StudentHomeTableViewController" customModule="Present" customModuleProvider="target" sceneMemberID="viewController">
@@ -343,7 +343,7 @@
                             <outlet property="delegate" destination="KGA-Id-tNc" id="7NB-hN-LKb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Courses" id="rmT-bS-cxd">
+                    <navigationItem key="navigationItem" title="My Courses" id="rmT-bS-cxd">
                         <barButtonItem key="leftBarButtonItem" title="Log out" id="2NR-Zv-MGq">
                             <connections>
                                 <action selector="logout:" destination="KGA-Id-tNc" id="V6M-YP-dTO"/>
