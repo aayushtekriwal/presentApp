@@ -21,7 +21,6 @@
 		9DEE0BA81BC0B05C003D778E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE0BA71BC0B05C003D778E /* Images.xcassets */; };
 		9DEE0BAB1BC0B05C003D778E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE0BA91BC0B05C003D778E /* LaunchScreen.xib */; };
 		9DEE0BB71BC0B05C003D778E /* PresentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE0BB61BC0B05C003D778E /* PresentTests.swift */; };
-		9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE0BC01BC0B0AE003D778E /* userModel.swift */; };
 		9DEE0BCF1BC0BE38003D778E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BCE1BC0BE38003D778E /* AudioToolbox.framework */; };
 		9DEE0BD11BC0BE4A003D778E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BD01BC0BE4A003D778E /* CFNetwork.framework */; };
 		9DEE0BD31BC0BE90003D778E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BD21BC0BE8F003D778E /* CoreGraphics.framework */; };
@@ -41,6 +40,7 @@
 		B44D42EC1BD481AD005E5898 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44D42E51BD481AD005E5898 /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
 		B44D42ED1BD481AD005E5898 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44D42E61BD481AD005E5898 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 		B45152041BD61C05004E0B86 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45152031BD61C05004E0B86 /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B45640BA1BD75B50009376C5 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45640B91BD75B50009376C5 /* userModel.swift */; settings = {ASSET_TAGS = (); }; };
 		B4BF00BE1BD58DAD006148FF /* Present_Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4BF00BD1BD58DAD006148FF /* Present_Background.jpg */; settings = {ASSET_TAGS = (); }; };
 		B4C033A61BD6C2880007DB0D /* Present_Background_light.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C033A51BD6C2880007DB0D /* Present_Background_light.jpg */; settings = {ASSET_TAGS = (); }; };
 		D12320F61BD1E3AD002F5D5B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12320F51BD1E3AD002F5D5B /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -94,7 +94,6 @@
 		9DEE0BB01BC0B05C003D778E /* PresentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE0BB51BC0B05C003D778E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEE0BB61BC0B05C003D778E /* PresentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTests.swift; sourceTree = "<group>"; };
-		9DEE0BC01BC0B0AE003D778E /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		9DEE0BCE1BC0BE38003D778E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9DEE0BD01BC0BE4A003D778E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9DEE0BD21BC0BE8F003D778E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,10 +115,11 @@
 		B45152011BD61C05004E0B86 /* Present-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Present-Bridging-Header.h"; sourceTree = "<group>"; };
 		B45152021BD61C05004E0B86 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B45152031BD61C05004E0B86 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		B45640B91BD75B50009376C5 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = userModel.swift; path = Present/userModel.swift; sourceTree = "<group>"; };
 		B4BF00BD1BD58DAD006148FF /* Present_Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Present_Background.jpg; sourceTree = "<group>"; };
 		B4C033A51BD6C2880007DB0D /* Present_Background_light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Present_Background_light.jpg; sourceTree = "<group>"; };
-		D12320F51BD1E3AD002F5D5B /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
-		D12320FB1BD1F160002F5D5B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = ../SettingsController.swift; sourceTree = "<group>"; };
+		D12320F51BD1E3AD002F5D5B /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		D12320FB1BD1F160002F5D5B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentMenuViewController.swift; sourceTree = "<group>"; };
 		D188862F1BD348BA009C7693 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D18886301BD348BA009C7693 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -194,13 +194,11 @@
 		9DEE0B921BC0B05C003D778E = {
 			isa = PBXGroup;
 			children = (
-				D12320F31BD1D78A002F5D5B /* Frameworks */,
 				9DEE0B9D1BC0B05C003D778E /* Present */,
+				D12320F31BD1D78A002F5D5B /* Frameworks */,
 				9DEE0BB31BC0B05C003D778E /* PresentTests */,
 				9DEE0B9C1BC0B05C003D778E /* Products */,
-				B45152011BD61C05004E0B86 /* Present-Bridging-Header.h */,
-				B45152021BD61C05004E0B86 /* SWRevealViewController.h */,
-				B45152031BD61C05004E0B86 /* SWRevealViewController.m */,
+				B45640BB1BD75B62009376C5 /* Unused files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,28 +214,16 @@
 		9DEE0B9D1BC0B05C003D778E /* Present */ = {
 			isa = PBXGroup;
 			children = (
-				B4C033A51BD6C2880007DB0D /* Present_Background_light.jpg */,
-				B4BF00BD1BD58DAD006148FF /* Present_Background.jpg */,
-				D12320FB1BD1F160002F5D5B /* SettingsController.swift */,
-				D12320F51BD1E3AD002F5D5B /* MenuController.swift */,
-				D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */,
+				B45640BC1BD75B87009376C5 /* Images */,
 				9DEE0BA01BC0B05C003D778E /* AppDelegate.swift */,
 				9DEE0BA21BC0B05C003D778E /* ViewController.swift */,
+				9D910B821BD478F1001176FF /* SignUpViewController.swift */,
 				9DEE0BA41BC0B05C003D778E /* Main.storyboard */,
 				9DEE0BA71BC0B05C003D778E /* Images.xcassets */,
 				9DEE0BA91BC0B05C003D778E /* LaunchScreen.xib */,
 				9DEE0B9E1BC0B05C003D778E /* Supporting Files */,
-				9DEE0BC01BC0B0AE003D778E /* userModel.swift */,
-				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
-				D188866F1BD359D9009C7693 /* CoursesTableViewCell.swift */,
-				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
-				D18886711BD35C72009C7693 /* RosterTableViewCell.swift */,
-				D18886731BD35C9F009C7693 /* RosterTableViewController.swift */,
-				9D910B7A1BD42013001176FF /* AddClassViewController.swift */,
-				9D910B7C1BD445BF001176FF /* StudentHomeTableViewController.swift */,
-				9D910B7E1BD4491C001176FF /* StudentHomeTableViewCell.swift */,
-				9D910B801BD44AA1001176FF /* StudentCourseViewController.swift */,
-				9D910B821BD478F1001176FF /* SignUpViewController.swift */,
+				B45640B71BD75AAE009376C5 /* Professor */,
+				B45640B81BD75AE2009376C5 /* Student */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -265,6 +251,52 @@
 				9DEE0BB51BC0B05C003D778E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B45640B71BD75AAE009376C5 /* Professor */ = {
+			isa = PBXGroup;
+			children = (
+				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
+				D188866F1BD359D9009C7693 /* CoursesTableViewCell.swift */,
+				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
+				D18886711BD35C72009C7693 /* RosterTableViewCell.swift */,
+				D18886731BD35C9F009C7693 /* RosterTableViewController.swift */,
+			);
+			name = Professor;
+			sourceTree = "<group>";
+		};
+		B45640B81BD75AE2009376C5 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */,
+				9D910B7A1BD42013001176FF /* AddClassViewController.swift */,
+				9D910B7E1BD4491C001176FF /* StudentHomeTableViewCell.swift */,
+				9D910B7C1BD445BF001176FF /* StudentHomeTableViewController.swift */,
+				9D910B801BD44AA1001176FF /* StudentCourseViewController.swift */,
+			);
+			name = Student;
+			sourceTree = "<group>";
+		};
+		B45640BB1BD75B62009376C5 /* Unused files */ = {
+			isa = PBXGroup;
+			children = (
+				B45152011BD61C05004E0B86 /* Present-Bridging-Header.h */,
+				D12320FB1BD1F160002F5D5B /* SettingsController.swift */,
+				D12320F51BD1E3AD002F5D5B /* MenuController.swift */,
+				B45640B91BD75B50009376C5 /* userModel.swift */,
+				B45152021BD61C05004E0B86 /* SWRevealViewController.h */,
+				B45152031BD61C05004E0B86 /* SWRevealViewController.m */,
+			);
+			name = "Unused files";
+			sourceTree = "<group>";
+		};
+		B45640BC1BD75B87009376C5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4C033A51BD6C2880007DB0D /* Present_Background_light.jpg */,
+				B4BF00BD1BD58DAD006148FF /* Present_Background.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		D12320F31BD1D78A002F5D5B /* Frameworks */ = {
@@ -419,6 +451,7 @@
 				9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */,
 				9D910B831BD478F1001176FF /* SignUpViewController.swift in Sources */,
 				D12321021BD2F874002F5D5B /* StudentMenuViewController.swift in Sources */,
+				B45640BA1BD75B50009376C5 /* userModel.swift in Sources */,
 				9D910B7B1BD42013001176FF /* AddClassViewController.swift in Sources */,
 				9D910B811BD44AA1001176FF /* StudentCourseViewController.swift in Sources */,
 				D18886701BD359D9009C7693 /* CoursesTableViewCell.swift in Sources */,
@@ -427,7 +460,6 @@
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				9D910B7D1BD445BF001176FF /* StudentHomeTableViewController.swift in Sources */,
 				9D910B7F1BD4491C001176FF /* StudentHomeTableViewCell.swift in Sources */,
-				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
 				9D862EDB1BCDE1CB005C0A78 /* CreateClassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
