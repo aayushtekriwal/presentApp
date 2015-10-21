@@ -43,7 +43,6 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
     func handleRefresh(refreshControl: UIRefreshControl) {
         // Do some reloading of data and update the table view's data source
         // Fetch more objects from a web service, for example...
-        
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -52,7 +51,6 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         //        self.title = pageTitle
         self.title = course["name"] as! String
         students = getStudents()
-        print(students)
         self.tableView.reloadData()
         initLocalBeacon()
     }
@@ -120,8 +118,6 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         return allStudents
     }
     
-    
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "RosterTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RosterTableViewCell
@@ -154,10 +150,9 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         
         
         //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
-        //***** Red looks bad and also sends a wrong signal. For those who are absent, professor should be able to call them out and manually create a log entry marking them absent for the class (Future feature). Only after this action should a cell turn red. Agree or not, but red still sends a wrong signal.
         if logs.count == 0{
             cell.backgroundColor = UIColor.clearColor()
-            //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
+        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
         }else{
             cell.backgroundColor = UIColor.greenColor()
         }

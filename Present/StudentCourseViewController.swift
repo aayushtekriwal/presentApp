@@ -16,7 +16,7 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
     var checkedIn = false
     
     //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
-    @IBOutlet weak var courseNameLabel: UILabel!  // *******Delete this line of code******
+    //    @IBOutlet weak var courseNameLabel: UILabel!  // *******Delete this line of code******
     //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     @IBAction func checkIn(sender: AnyObject) {
@@ -130,7 +130,6 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         if beacons.count > 0 {
-            print("Found beacon")
             let beacon = beacons[0]
             updateDistance(beacon.proximity)
         } else {
@@ -144,23 +143,27 @@ class StudentCourseViewController: UIViewController, CLLocationManagerDelegate {
             case .Unknown:
                 self.view.backgroundColor = UIColor.lightGrayColor()
                 self.beaconStrength.text = "Not In Range"
+                self.checkInButton.enabled = false
             case .Far:
                 self.view.backgroundColor = UIColor.orangeColor()
                 self.beaconStrength.text = "Weak"
                 if (self.checkedIn==false) {
                     self.checkInButton.enabled = true
+                    self.checkInButton.titleLabel?.textColor = UIColor.whiteColor()
                 }
             case .Near:
                 self.view.backgroundColor = UIColor.yellowColor()
                 self.beaconStrength.text = "Average"
                 if (self.checkedIn==false) {
                     self.checkInButton.enabled = true
+                    self.checkInButton.titleLabel?.textColor = UIColor.whiteColor()
                 }
             case .Immediate:
                 self.view.backgroundColor = UIColor.greenColor()
                 self.beaconStrength.text = "Strong"
                 if (self.checkedIn==false) {
                     self.checkInButton.enabled = true
+                    self.checkInButton.titleLabel?.textColor = UIColor.whiteColor()
                 }
             }
         }

@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
         //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
-        self.firstNameField.becomeFirstResponder()
+//        self.firstNameField.becomeFirstResponder()
         //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
         
         rolePicker.delegate = self
