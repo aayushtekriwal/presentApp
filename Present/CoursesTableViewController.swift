@@ -12,13 +12,11 @@ class CoursesTableViewController: UITableViewController {
     var currentUser = PFUser.currentUser()!
     var courses:[AnyObject] = []
     
-    //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
     @IBAction func logout(sender: AnyObject) {
         PFUser.logOut()
         let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginNav")
         self.presentViewController(loginPage!, animated: true, completion: nil)
     }
-    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     override func viewWillAppear(animated: Bool) {
         courses = getCourses()

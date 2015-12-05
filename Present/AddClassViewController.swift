@@ -22,7 +22,6 @@ class AddClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Present_Background_light.jpg")!)
         self.majorInput.becomeFirstResponder() //focuses the first empty field by default. This way the keyboard is already open, so the user has to do one less click
         self.majorInput.keyboardType = UIKeyboardType.PhonePad // This brings up a special keyboard to enter a major value
@@ -35,7 +34,6 @@ class AddClassViewController: UIViewController {
         self.view.endEditing(true)
         return false
     }
-    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

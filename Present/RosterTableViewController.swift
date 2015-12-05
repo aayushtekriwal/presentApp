@@ -22,7 +22,6 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         let major = String(course["major"])
         let minor = String(course["minor"])
         
-        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         let alert = UIAlertController(title: "Beacon Details", message: "Communicate the beacon details below for Students to add themselves to the class's roster" + "\n" + "\n" + "Major: " + major + "\n" + "Minor: " + minor, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             switch action.style{
@@ -38,7 +37,6 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         }))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
     
     func handleRefresh(refreshControl: UIRefreshControl) {
         // Do some reloading of data and update the table view's data source
@@ -150,10 +148,8 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         }
         
         
-        //  *-*-*-*-*-*-*-*-*  New code by Aayush *-*-*-*-*-*-*-*-*
         if logs.count == 0{
             cell.backgroundColor = UIColor.clearColor()
-        //  *-*-*-*-*-*-*-*-*  End of new code by Aayush *-*-*-*-*-*-*-*-*
         }else{
             cell.backgroundColor = UIColor.greenColor()
         }
